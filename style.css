@@ -1,0 +1,366 @@
+
+header {
+    background-color: orange;
+    height: 150px;
+}
+
+.logo-div {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    
+    
+}
+
+.basket_icon {
+    height: 100px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.basket_icon:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+img {
+    object-fit: cover;
+}
+
+
+.restaurant-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant-images {
+    display: flex;
+    justify-content: center;
+}
+
+.burger-img {
+    width: 100%;
+    height: 400px;
+    object-position: 60% 20% 100%;
+}
+
+.pizza-img {
+    position: absolute;
+    z-index: +1;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-position: 2% 1px;
+    border-color: white;
+    margin-top: 300px;
+    border-style: solid;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 36px;
+    margin-left: 36px;
+}
+
+.reviews-text {
+    color: orange;
+    margin-left: 36px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.switch {
+    margin-top: 16px;
+    background-color: rgb(247,246,241);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.switch a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: gray;
+}
+
+.switch a:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.arrow-right {
+    border: solid orange;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 6px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 36px;
+}
+
+.main-dish-banner {
+    height: 300px;
+    width: 100%;
+    object-position: 2% -165px;
+}
+
+.main-dish-headline {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 36px;
+}
+
+.dish-block {
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.dish-block:hover {
+    background-color: rgb(254,229,203);
+}
+
+.add-button {
+    background-color: orange;
+    color: white;
+    border-color: black;
+    width: 64px;
+    height: 64px;
+    font-size: 40px;
+    border-radius: 3px;
+}
+
+.add-button:hover {
+    border-color: white;
+}
+
+.dish-block div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dishprice {
+    margin-left: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: orange;
+    font-size: 20px;
+}
+
+.dishdescription {
+    margin-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.dish-block div p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 16px;
+}
+
+.content {
+    width: calc(100% - 308px);
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.basket_wrapper {
+    width: 300px;
+    height: 100vh;
+    flex-grow: 1;
+    overflow-y: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 150px;
+    align-self: flex-start;
+}
+
+.dishname {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.basket {
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.basket_headline {
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.basket_value {
+    width: 100%;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    
+}
+
+.basket_value p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sum-inbetween {
+    display: flex;
+    gap: 100px;
+}
+
+.sum-basket {
+    display: flex;
+    gap: 100px;
+    font-weight: bold;
+}
+
+.delivery-costs {
+    display: flex;
+    gap: 100px;
+}
+
+
+.close-basket-button {
+    position: relative;
+    top: 10px;
+    background: transparent;
+    border: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+    color: orange;
+}
+
+.close-basket-button:hover{
+    transform: scale(1.02);
+}
+
+.close-basket-span {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.side_element_close {
+    display: none;
+}
+
+.content_only {
+    width: 100%;
+}
+
+.minus-button {
+    color: orange;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+}
+
+.plus-button {
+    color: orange;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+}
+
+.delete-Button {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 20px;
+}
+
+#mobile-cart-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    text-wrap-mode: nowrap;
+}
+
+.order-button {
+    color: white;
+    background-color: orange;
+    border-color: orange;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.order-button:hover {
+    border-color: white;
+}
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-open {
+    opacity: 1;
+    z-index: 3000;
+}
+
+#popup-box{
+    background-color: orange;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+#popup-box p {
+    line-height: 24px;
+    margin: 10px 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#popup-box h2 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+

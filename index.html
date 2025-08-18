@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestell App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./standard.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon/favicon-32x32.png">
+</head>
+<body onload="init()">
+    <header>
+        <div class="logo-div">
+            <img class="logo" src="./assets/logos/Logo.png" alt="Logo">
+            <img id="basket_icon" class="basket_icon" onclick="basketToggle()" src="./assets/images/create_an_onlineshop_basket_Icon_with_transparent_background-removebg-preview.png" alt="basket">
+        </div>
+    </header>
+    <div class="content_wrapper">
+    <section class="content" id="content">
+        <div class="restaurant-profile">
+            <div class="restaurant-images">
+                <img class="burger-img" src="./assets/images/burger-7422970_1280.jpg" alt="burger-image">
+                <img class="pizza-img" src="./assets/images/pizza-2068272_640.jpg" alt="restaurant-profilepicture">
+            </div>
+        <div class="headline-div">
+            <h1>Pizza Paradise</h1>
+            <p class="reviews-text">Bewertung (4,2 von 5 Sternen)</p>
+        </div>
+    </div>
+    <div class="switch">
+        <p><i class="arrow-right"></i></p>
+        <a onclick="mainDishRender()" class="main-dish">Hauptgerichte</a>
+        <a onclick="sideDishRender()" class="side-dish"> Beilagen</a>
+        <a onclick="dessertRender()" class="dessert-dish"> Dessert</a>
+    </div>
+    <div id="main-dish-head" class="main-dish-head">
+    </div>
+    <div id="main-dish-content">    
+    </div>
+    </section>
+    
+    <section class="side_element" id="side_element">
+        <span class="close-basket-span"><button class="close-basket-button" onclick="basketToggle()">X</button></span>
+        <h2 class="basket_headline">Warenkorb</h2>
+        <div class="basket_wrapper">
+            <div id="basket_content" class="basket"></div>
+            <div id="basket_value" class="basket_value"></div>
+        </div>
+           
+    </section> 
+    </div>
+    <button id="mobile-cart-button" onclick="basketToggle()" style="display: none;">
+        Warenkorb öffnen
+    </button>
+    <div onclick="orderPopup()" id="popup" class="popup">
+        <div id="popup-box">
+            <h2>Vielen Dank für die Test-Bestellung!</h2>
+            <p>Anbei erhälst du eine Bestätigungs-Email zu deiner Bestellung.
+                Wir werden natürlich so schnell wie möglich deine Bestellung bearbeiten.
+            </p>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script src="./template.js"></script>
+</html>
