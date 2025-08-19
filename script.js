@@ -142,7 +142,7 @@ function addSideDishToBasket(index) {
 function addDessertToBasket(index) {
     let dishName = dessert[index].name;
     let existingDish = basket.find(d => d.name === dishName);
-
+    
     if (existingDish) {
         existingDish.amount += 1;
     } else {
@@ -182,8 +182,6 @@ function basketToggle() {
             content.classList.add("content_only")
         }
     }
-
-
     if (window.matchMedia("(max-width: 820px)").matches) {
         if (basket.classList.contains("side_element_close")) {
             mobileButton.style.display = 'block';
@@ -217,24 +215,19 @@ function checkScreenSize() {
         basket.classList.remove('side_element_close');
         basket.classList.remove('content_only');
     }
-
-    
 }
 
 function orderPopup() {
     let popup = document.getElementById('popup');
     
-
     if (!basket == 0) {
         popup.classList.toggle('popup-open');
-
         popup.addEventListener("click", () => {
             basket.length = 0;
             renderBasket();
             if (window.matchMedia("(max-width: 820px)").matches) {
                 basketToggle();
-            }
-            
+            }   
         })
     }
 }
