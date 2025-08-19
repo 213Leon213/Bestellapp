@@ -106,6 +106,61 @@ function init() {
     
 }
 
+function mainDishRender() {
+let mainDishContent = document.getElementById('main-dish-content');
+let mainDishHead = document.getElementById('main-dish-head');
+mainDishContent.innerHTML = "";
+mainDishHead.innerHTML = "";
+    for (let index = 0; index < dishes.length; index++) { 
+        mainDishContent.innerHTML += mainDishRenderTemplate(index);   
+    }
+    mainDishHead.innerHTML += mainDishHeadTemplate();
+}
+
+function sideDishRender() {
+let sideDishContent = document.getElementById('main-dish-content');
+let sideDishHead = document.getElementById('main-dish-head');
+sideDishContent.innerHTML = "";
+sideDishHead.innerHTML = "";
+for (let index = 0; index < sideDishes.length; index++) { 
+        sideDishContent.innerHTML += sideDishRenderTemplate(index);        
+    }
+sideDishHead.innerHTML += sideDishHeadTemplate();
+}
+
+function dessertRender() {
+let dessertContent = document.getElementById('main-dish-content');
+let dessertHead = document.getElementById('main-dish-head');
+dessertContent.innerHTML = "";
+dessertHead.innerHTML = "";
+for (let index = 0; index < dessert.length; index++) { 
+        dessertContent.innerHTML += dessertRenderTemplate(index);        
+    }
+dessertHead.innerHTML += dessertHeadTemplate();
+}
+
+function renderBasket() {
+    let basketContent = document.getElementById('basket_content');
+    basketContent.innerHTML = "";
+    for (let index = 0; index < basket.length; index++) {
+        basketContent.innerHTML += renderBasketTemplate(index);
+    }
+    renderBasketValue();
+}
+
+function renderBasketValue() {
+    let sum = document.getElementById('basket_value');
+    sum.innerHTML = "";
+    let prices = 0;
+    for (let index = 0; index < basket.length; index++) {
+        prices += basket[index].price * basket[index].amount;
+    }
+    let total = prices + 5;
+    sum.innerHTML = renderBasketValueTemplate(prices, total);
+   if (basket.length === 0) {
+        sum.innerHTML = "";
+   }                 
+}
 
 function addDishToBasket(index) {
     let dishName = dishes[index].name;
