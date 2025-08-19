@@ -77,6 +77,14 @@
    }
 }
 
+@media (max-width: 410px) {
+    
+    .dish-block div p {
+        width: 250px;
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 360px) {
     
     .switch {

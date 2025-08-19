@@ -4,13 +4,7 @@ let mainDishHead = document.getElementById('main-dish-head');
 mainDishContent.innerHTML = "";
 mainDishHead.innerHTML = "";
     for (let index = 0; index < dishes.length; index++) { 
-        mainDishContent.innerHTML += `<div class="dish-block">
-                                    <div>
-                                        <p id="${dishes[index].name.toLowerCase()}" class="dishHeadline">${dishes[index].name}</p>
-                                        <button class="add-button" onclick="addDishToBasket(${index})">+</button>
-                                    </div>
-                                        <p class="dishdescription">${dishes[index].description}</p>
-                                        <p id="${dishes[index].price.toLowerCase}" class="dishprice">${dishes[index].price.toFixed(2).replace(".", ",") + "€"}</p></div>`   
+        mainDishContent.innerHTML += mainDishRenderTemplate(index);   
     }
     mainDishHead.innerHTML += `<img  class="main-dish-banner" src="./assets/images/pizza-3010062_1920.jpg" alt="maindishpicture">
                                 <p class="main-dish-headline">Hauptgerichte</p>`
@@ -22,13 +16,7 @@ let sideDishHead = document.getElementById('main-dish-head');
 sideDishContent.innerHTML = "";
 sideDishHead.innerHTML = "";
 for (let index = 0; index < sideDishes.length; index++) { 
-        sideDishContent.innerHTML += `<div class="dish-block">
-                                    <div>
-                                        <p id="${sideDishes[index].name.toLowerCase()}" class="dishHeadline">${sideDishes[index].name}</p>
-                                        <button class="add-button" onclick="addSideDishToBasket(${index})">+</button>
-                                    </div>
-                                        <p class="dishdescription">${sideDishes[index].description}</p>
-                                        <p id="${sideDishes[index].price.toLowerCase}" class="dishprice">${sideDishes[index].price.toFixed(2).replace(".", ",") + "€"}</p></div>`        
+        sideDishContent.innerHTML += sideDishRenderTemplate(index);        
     }
 sideDishHead.innerHTML += `<img  class="main-dish-banner" src="./assets/images/bruschetta-5699490_1920.jpg" alt="sidedishpicture">
                                 <p class="main-dish-headline">Beilagen</p>`
@@ -40,13 +28,7 @@ let dessertHead = document.getElementById('main-dish-head');
 dessertContent.innerHTML = "";
 dessertHead.innerHTML = "";
 for (let index = 0; index < dessert.length; index++) { 
-        dessertContent.innerHTML += `<div class="dish-block">
-                                    <div>
-                                        <p id="${dessert[index].name.toLowerCase()}" class="dishHeadline">${dessert[index].name}</p>
-                                        <button class="add-button" onclick="addDessertToBasket(${index})">+</button>
-                                    </div>
-                                        <p class="dishdescription">${dessert[index].description}</p>
-                                        <p id="${dessert[index].price.toLowerCase}" class="dishprice">${dessert[index].price.toFixed(2).replace(".", ",") + "€"}</p></div>`        
+        dessertContent.innerHTML += dessertRenderTemplate(index);        
     }
 dessertHead.innerHTML += `<img  class="main-dish-banner" src="./assets/images/ice-cream-3611698_1920.jpg" alt="dessertpicture">
                                 <p class="main-dish-headline">Dessert</p>`
@@ -84,3 +66,32 @@ function renderBasketValue() {
    }                 
 }
 
+function mainDishRenderTemplate(index) {
+    return `<div class="dish-block">
+                                    <div>
+                                        <p id="${dishes[index].name.toLowerCase()}" class="dishHeadline">${dishes[index].name}</p>
+                                        <button class="add-button" onclick="addDishToBasket(${index})">+</button>
+                                    </div>
+                                        <p class="dishdescription">${dishes[index].description}</p>
+                                        <p class="dishprice">${dishes[index].price.toFixed(2).replace(".", ",") + "€"}</p></div>`
+}
+
+function sideDishRenderTemplate(index) {
+    return `<div class="dish-block">
+                                    <div>
+                                        <p id="${sideDishes[index].name.toLowerCase()}" class="dishHeadline">${sideDishes[index].name}</p>
+                                        <button class="add-button" onclick="addSideDishToBasket(${index})">+</button>
+                                    </div>
+                                        <p class="dishdescription">${sideDishes[index].description}</p>
+                                        <p class="dishprice">${sideDishes[index].price.toFixed(2).replace(".", ",") + "€"}</p></div>`
+}
+
+function dessertRenderTemplate(index) {
+    return `<div class="dish-block">
+                                    <div>
+                                        <p id="${dessert[index].name.toLowerCase()}" class="dishHeadline">${dessert[index].name}</p>
+                                        <button class="add-button" onclick="addDessertToBasket(${index})">+</button>
+                                    </div>
+                                        <p class="dishdescription">${dessert[index].description}</p>
+                                        <p class="dishprice">${dessert[index].price.toFixed(2).replace(".", ",") + "€"}</p></div>`  
+}
