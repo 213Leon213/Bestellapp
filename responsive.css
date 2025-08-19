@@ -76,3 +76,21 @@
     margin-top: 20px;
    }
 }
+
+@media (max-width: 360px) {
+    
+    .switch {
+        gap: 9px;
+    }
+    
+    
+}
+
+@media (max-width: 340px) {
+    
+    .arrow-right {
+        margin-left: 6px;
+    }
+    
+    
+}
