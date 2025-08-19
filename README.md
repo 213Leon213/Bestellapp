@@ -8,7 +8,7 @@ Files include:<br>
 - standard.css<br>
 - template.js<br>
 - responsive.css<br>
-- assets folder<br>
+- assets folder<br><br>
 assets folder includes:<br>
 - favicon folder<br>
 - images folder<br>
